@@ -1,0 +1,83 @@
+.cabecalho_caixa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho{
+    background-color: var(--azul);
+    padding: 1rem 0;
+}
+
+.cabecalho_logo{
+    width: 5rem;
+}
+
+.cabecalho_logo a{
+    width: 100%;
+}
+
+.cabecalho_logo a span{
+    font-size: 1.27rem;
+    color: var(--cinza-claro);
+    font-family: 'Rowdies', cursive;
+    transition: 300ms;
+}
+
+.cabecalho_menu{
+    width: 40%;
+}
+
+.cabecalho_menu ul{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho_menu-item{
+    font-size: 1.1rem;
+}
+
+.cabecalho_menu-item a{
+    color: var(--cinza-claro);
+    padding: .5rem;
+}
+
+.cabecalho_menu-item a {
+    font-weight: 600;
+    transition: 300ms;
+}
+
+.cabecalho_menu-item a:hover, .cabecalho_logo a:hover span {
+    color: var(--laranja);
+}
+
+@media screen and (min-width:  768px) {
+    .cabecalho_menu{
+        width: 55%;
+    }
+
+	.cabecalho{
+        padding: 1rem 5rem;
+    }
+    
+    .cabecalho_caixa{
+        flex-direction: row;
+    }
+
+    .cabecalho_menu>ul {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:  1024px) {
+    .cabecalho_menu{
+        width: 40%;
+    }
+
+	.cabecalho{
+        padding: 1rem 9rem;
+    }
+}

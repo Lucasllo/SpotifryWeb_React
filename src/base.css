@@ -1,0 +1,22 @@
+:root{
+  --azul-escuro: #0F044C;
+  --azul-meio-escuro:#293B5F; 
+  --azul: #141E61;
+  --cinza: #787A91;
+  --cinza-claro: #EEEEEE;
+  --laranja: #f7741d;/*#787A91;*/
+  --laranja-escuro: #c95609;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+img{
+  width: 100%;
+}
+
+/* .container{
+  width: 80%;
+  margin: auto;
+} */

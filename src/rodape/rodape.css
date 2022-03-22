@@ -1,0 +1,77 @@
+/* .rodape{
+    height: 30vh;
+} */
+
+.rodape_info{
+    width: 60%;
+}
+
+.rodape {
+    background-color: var(--azul);
+    padding: 1rem;
+}
+
+.rodape_redes, .rodape_info{
+    width: 80%;
+}
+
+.rodape_redes ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rodape_info>ul>li{
+    margin: 2rem 0;
+}
+
+.rodape_redes a{
+    width: 50px;
+}
+
+.rodape_info_item ul li:first-child{
+    font-weight: bold;
+}  
+
+.rodape_info_item a, .rodape_info_item ul li:first-child {
+    color: var(--cinza-claro);
+    padding: .5rem;
+}
+
+.rodape_info_item a:hover{
+    color: var(--laranja);
+}
+
+.rodape_caixa{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width:  768px) {
+	.rodape_info>ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .rodape_info>ul>li{
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:  1024px) {
+    .rodape{
+        padding: 1rem 8rem;
+    }
+
+    .rodape_caixa{
+        flex-direction: row;
+        align-items: unset;
+    }
+
+    .rodape_redes{
+        width: 50%;
+    }
+}

@@ -1,0 +1,78 @@
+.cadastro{
+    display: flex;
+    justify-content: center;
+    background-color: var(--cinza-claro);
+    padding: 1rem;
+}
+
+.cadastro_caixa{
+    color: var(--azul-escuro);
+    background-color: var(--cinza-claro);
+    border-radius: 10px;
+    padding: 2rem;
+    font-size: 1.1rem;
+    min-width: 420px;
+    width: 700px;
+}
+
+.formulario {
+    margin-top: 2rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario fieldset input{
+    border: none;
+    background-color: var(--cinza-claro);
+    border-bottom: 1px solid var(--azul-escuro);
+    padding: 1.2rem .5rem .5rem .5rem ;
+    outline: none;
+}
+
+.cadastro_formulario_legenda{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.cadastro_formulario_caixa{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.cadastro_formulario_caixa input:focus + label, .cadastro_formulario_caixa input:not(:placeholder-shown) + label{
+    font-size: 1rem;
+    bottom: 25px;
+}
+
+label{
+    font-weight: 400;
+    position: absolute;
+    bottom: 5px;
+    left: .5rem;
+    transition: all 200ms;
+}
+
+.cadastro_formulario_enviar{
+    text-align: center;
+}
+
+.cadastro_formulario_botao{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: white;
+    border: none;
+    background-color: var(--azul);
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    transition: 300ms;
+}
+
+.cadastro_formulario_botao:hover{
+    background-color: var(--laranja-escuro);
+    cursor: pointer;
+}

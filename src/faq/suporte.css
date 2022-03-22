@@ -1,0 +1,85 @@
+
+.faq{
+    padding: 1rem 1rem;
+    text-align: center;
+    background-color: var(--cinza-claro);
+}
+
+.faq table{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.faq table tbody{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.faq tr{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq th, .faq td{
+    text-align: justify;
+    padding: .7rem 1rem;
+    vertical-align: top;
+    line-height: 1.3rem;
+} 
+
+.pesquisa{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pesquisa_caixa{
+    width: 100%;
+}
+
+.pesquisa_caixa div{
+    position: relative;
+    display: flex;
+    margin: 0 0 0 .8rem;
+}
+
+.pesquisa h3, .pesquisa p{
+    padding: .3rem 0;
+}
+
+.pesquisa_caixa div img{
+    position: absolute;
+    width: 20px;
+    top: 8px;
+}
+
+.pesquisa_caixa input{
+    padding: 10px 10px 10px 40px;
+    border: none;
+    border-bottom: 1px solid var(--azul-escuro);
+    width: 100%;
+    background-color: var(--cinza-claro);
+    outline: none;
+}
+
+@media screen and (min-width:  768px) {
+	.faq {
+        padding: 1rem 5rem;
+    }
+    .faq tr{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:  1024px) {
+	.faq {
+        padding: 1rem 10rem;
+    }
+    .faq tr{
+        width: 30%;
+    }
+}
