@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import CaixaFormulario from "../cadastro/caixaFormulario/caixaFormulario";
+import { log } from "../cadastro/caixaFormulario/dadosFormulario";
 import "./login.css";
 
 function Login() {
@@ -6,14 +9,19 @@ function Login() {
       <section class="login_caixa">
         <h2>Login</h2>
         <form class="login_formulario">
-          <div class="login_formulario_caixa">
-            <input type="text" id="nome" name="nome" placeholder=" " />
-            <label for="nome">E-mail:</label>
-          </div>
-          <div class="login_formulario_caixa">
-            <input type="password" id="senha" name="senha" placeholder=" " />
-            <label for="senha">Senha:</label>
-          </div>
+        {log().map(item => {
+              return(
+                <CaixaFormulario 
+                  name = {item.name}
+                  id = {item.id}
+                  type = {item.type}
+                  placeholder = {item.placeholder}
+                  required = {item.required}
+                  class = {item.class}
+                  label = {item.label}
+                />
+              )
+            })}
           <p>
             Esqueceu? Recupere a senha
             <a href="#">aqui</a>
@@ -31,7 +39,7 @@ function Login() {
         <div class="login_formulario_info">
           <p>
             Não tem cadastro?
-            <a href="cadastro.html">Cadastre-se</a>
+            <Link to="/cadastro">Cadastre-se</Link>
           </p>
           <p>
             Ao continuar com o acesso, você concorda com a nossa{" "}

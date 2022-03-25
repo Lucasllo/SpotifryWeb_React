@@ -1,3 +1,5 @@
+import "./reset.css";
+import "./base.css";
 import Menu from "./menu/menu";
 import Rodape from "./rodape/rodape";
 import Index from "./index/index";
