@@ -7,6 +7,17 @@ const itens = [
     texto: "Com Spotifry Premium você pode curtir suas músicas, playlists e podcasts sem anúncios, aproveite!"}
 ]
 
-export default function ite(){
+const itensAnuncio = [
+    {titulo:"Você mais conectado",
+    texto: "Aproveite o momento com música e faça parte seja Premium, Family ou Free."},
+    {titulo:" Spotifry Premium",
+    texto: "Com Spotifry Premium você pode curtir suas músicas, playlists e podcasts sem anúncios, aproveite!"}
+]
+
+export function iteAnun(){
+    return itensAnuncio;
+}
+
+export function ite(){
     return itens;
 }

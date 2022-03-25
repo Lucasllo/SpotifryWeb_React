@@ -3,8 +3,7 @@ import ItemCarrosel from "./carrosel/imagemCarrosel";
 import imagCarrosel from "./carrosel/imagensCarrosel";
 import Item from "./item/item";
 import ItemAnuncio from "./item/itemAnuncio";
-import iteAnun from "./item/itemAnuncioDados";
-import ite from "./item/itemDados";
+import { ite, iteAnun } from "./item/itemDados";
 
 
 function Index() {
