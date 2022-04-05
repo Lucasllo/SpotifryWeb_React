@@ -1,0 +1,12 @@
+.playlists{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: ; */
+    padding: 0 1rem; 
+}
+
+.playlists li{
+    width: 25%;
+    background-color: aqua;
+}

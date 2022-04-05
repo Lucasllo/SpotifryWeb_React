@@ -7,6 +7,7 @@ import Suporte from "./faq/suporte";
 import Cadastro from "./cadastro/cadastro";
 import Login from "./login/login";
 import { Routes, Route } from "react-router-dom";
+import Playlists from "./playlists/playlists";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route element={<Cadastro />} path="/cadastro"></Route>
       </Routes>
       <Rodape />
+      <Playlists />
     </>
   );
 }
