@@ -14,3 +14,24 @@
 .playlists a{
     width: 100%;
 }
+
+.playlist{
+    display: flex;
+    align-items: center;
+    justify-content:  space-evenly;
+}
+
+.playlist_capa{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.playlist_capa figure{
+    width: 70%;
+}
+
+
+.playlist_musicas{
+    width: 25%;
+}
