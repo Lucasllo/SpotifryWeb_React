@@ -1,58 +1,20 @@
 import { Link } from 'react-router-dom';
 import './playlists.css'
+import playlists from './playlists_imagens/playlists_imagens';
 
 function Playlists() {
     return (
         <div>
             <ul className="playlists">
-                <li>
-                    <Link to="/">
-                        <img src="img/logo.png" />
-                        <span>Spotifry</span>
+            {playlists().map((item) => {
+                return(
+                    <li>
+                    <Link to={{ pathname: `/playlist/${item.id}`}}>
+                        <img src={item.imagem} />
                     </Link>
                 </li>
-                <li>
-                    <Link to="/">
-                        <img src="img/logo.png" />
-                        <span>Spotifry</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/">
-                        <img src="img/logo.png" />
-                        <span>Spotifry</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/">
-                        <img src="img/logo.png" />
-                        <span>Spotifry</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/">
-                        <img src="img/logo.png" />
-                        <span>Spotifry</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/">
-                        <img src="img/logo.png" />
-                        <span>Spotifry</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/">
-                        <img src="img/logo.png" />
-                        <span>Spotifry</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/">
-                        <img src="img/logo.png" />
-                        <span>Spotifry</span>
-                    </Link>
-                </li>t7x
+                )
+            })}
             </ul>
         </div>
     )

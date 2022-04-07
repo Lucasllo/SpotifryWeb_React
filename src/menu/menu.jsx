@@ -28,6 +28,11 @@ function Menu(){
                             Login
                         </Link>
                     </li>
+                    <li className="cabecalho_menu-item">
+                        <Link to="/playlists">
+                            Playlist
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </div>
