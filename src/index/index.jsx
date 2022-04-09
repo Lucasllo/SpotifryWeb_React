@@ -58,7 +58,7 @@ function Index() {
 
         <div className="principal_caixa3">
           <Item
-            imagem="img/play_family.jpg"
+            imagem="/img/play_family.jpg"
             titulo="Spotifry family"
             texto="Conecte toda a família com música de qualidade!"
           />

@@ -79,22 +79,22 @@ function Rodape(){
                 <ul>
                     <li className="rodape_redes_instagram">
                         <a href="">
-                            <img src="img/instagram.svg" alt="logo Instagram"/>
+                            <img src="/img/instagram.svg" alt="logo Instagram"/>
                         </a>
                     </li>
                     <li className="rodape_redes_twitter">
                         <a href="">
-                            <img src="img/twitter.svg" alt="logo Twitter"/>
+                            <img src="/img/twitter.svg" alt="logo Twitter"/>
                         </a>
                     </li>
                     <li className="rodape_redes_facebook">
                         <a href="">
-                            <img src="img/facebook.svg" alt="logo Facebook"/>
+                            <img src="/img/facebook.svg" alt="logo Facebook"/>
                         </a>
                     </li>
                     <li className="rodape_redes_youtube">
                         <a href="">
-                            <img src="img/youtube.svg" alt="logo Youtube"/>
+                            <img src="/img/youtube.svg" alt="logo Youtube"/>
                         </a>
                     </li>
                 </ul>

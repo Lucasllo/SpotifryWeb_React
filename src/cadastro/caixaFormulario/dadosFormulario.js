@@ -6,7 +6,8 @@ const inforBasica = [
     placeholder:" ",
     required:true,
     label: "Nome",
-    class:"cadastro_formulario_caixa"
+    class:"cadastro_formulario_caixa",
+    position: 0
 },{
     name: "email",
     id:"email",
@@ -14,7 +15,8 @@ const inforBasica = [
     placeholder:" ",
     required:true,
     label: "E-mail",
-    class:"cadastro_formulario_caixa"
+    class:"cadastro_formulario_caixa",
+    position: 1
 },{
     name: "senha",
     id:"senha",
@@ -22,10 +24,10 @@ const inforBasica = [
     placeholder:" ",
     required:true,
     label: "Senha",
-    class:"cadastro_formulario_caixa"
+    class:"cadastro_formulario_caixa",
+    position: 2
 }
 ]
-
 
 const inforPessoal = [{
     name: "nascimento",
@@ -34,7 +36,8 @@ const inforPessoal = [{
     placeholder:" ",
     required:true,
     label: "Data de Nascimento",
-    class:"cadastro_formulario_caixa"
+    class:"cadastro_formulario_caixa",
+    position: 3
 },{
     name: "cpf",
     id:"cpf",
@@ -42,9 +45,9 @@ const inforPessoal = [{
     placeholder:" ",
     required:true,
     label: "CPF",
-    class:"cadastro_formulario_caixa"
+    class:"cadastro_formulario_caixa",
+    position: 4
 }]
-
 
 const endereco = [{
     name: "cep",
@@ -53,7 +56,8 @@ const endereco = [{
     placeholder:" ",
     required:true,
     label: "CEP",
-    class:"cadastro_formulario_caixa"
+    class:"cadastro_formulario_caixa",
+    position: 5
 },{
     name: "logradouro",
     id:"logradouro",
@@ -61,7 +65,8 @@ const endereco = [{
     placeholder:" ",
     required:true,
     label: "Logradouro",
-    class:"cadastro_formulario_caixa"
+    class:"cadastro_formulario_caixa",
+    position: 6
 },{
     name: "cidade",
     id:"cidade",
@@ -69,7 +74,8 @@ const endereco = [{
     placeholder:" ",
     required:true,
     label: "Cidade",
-    class:"cadastro_formulario_caixa"
+    class:"cadastro_formulario_caixa",
+    position: 7
 },{
     name: "estado",
     id:"estado",
@@ -77,7 +83,8 @@ const endereco = [{
     placeholder:" ",
     required:true,
     label: "Estado",
-    class:"cadastro_formulario_caixa"
+    class:"cadastro_formulario_caixa",
+    position: 8
 }]
 
 const login = [{
@@ -87,7 +94,8 @@ const login = [{
     placeholder:" ",
     required:true,
     label: "E-mail",
-    class:"login_formulario_caixa"
+    class:"login_formulario_caixa",
+    position: 9
 },{
     name: "Senha",
     id:"Senha",
@@ -95,9 +103,9 @@ const login = [{
     placeholder:" ",
     required:true,
     label: "Senha",
-    class:"login_formulario_caixa"
+    class:"login_formulario_caixa",
+    position: 10
 }]
-
 
 export function infoBasic(){
     return inforBasica;

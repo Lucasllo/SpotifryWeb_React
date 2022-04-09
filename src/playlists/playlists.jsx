@@ -10,7 +10,7 @@ function Playlists() {
                 return(
                     <li>
                     <Link to={{ pathname: `/playlist/${item.id}`}}>
-                        <img src={item.imagem} />
+                        <img src={item.imagem} alt="imagem capa"/>
                     </Link>
                 </li>
                 )

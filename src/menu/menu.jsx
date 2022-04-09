@@ -7,7 +7,7 @@ function Menu(){
         <div className=" cabecalho_caixa">
             <div className="cabecalho_logo">
                <Link to="/">
-                    <img src="img/logo.png"/>
+                    <img src="/img/logo.png"/>
                     <span>Spotifry</span>
                 </Link>
             </div>
