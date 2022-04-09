@@ -8,7 +8,7 @@ function Playlists() {
             <ul className="playlists">
             {playlists().map((item) => {
                 return(
-                    <li>
+                <li>
                     <Link to={{ pathname: `/playlist/${item.id}`}}>
                         <img src={item.imagem} alt="imagem capa"/>
                     </Link>

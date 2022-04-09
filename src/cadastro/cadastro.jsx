@@ -59,7 +59,7 @@ function Cadastro() {
     <main className="cadastro">
       <section className="cadastro_caixa">
         <h2>Cadastro</h2>
-        <form action="" className="formulario ">
+        <form  action="" className="formulario ">
           <fieldset>
             <legend className="cadastro_formulario_legenda">
               Informações básicas

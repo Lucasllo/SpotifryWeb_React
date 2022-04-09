@@ -19,19 +19,52 @@
     display: flex;
     align-items: center;
     justify-content:  space-evenly;
+    padding: 2rem 0;
 }
 
 .playlist_capa{
+    align-self: flex-start;
     display: flex;
     align-items: center;
     justify-content:center;
 }
 
-.playlist_capa figure{
-    width: 70%;
+.playlist_musicas li{
+    background-color:  var(--azul-meio-escuro);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    height: 4rem;
+    cursor: pointer;
 }
 
-
 .playlist_musicas{
-    width: 25%;
+    width: 35%;
+    color: var(--laranja);
+    font-weight: bold;
+}
+
+.playlist_musicas ul{
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding-left: 0;
+}
+
+.playlist_musicas_play{
+    width: 20px;    
+}
+
+@media screen and (min-width:  0px) and (max-width:  760px) {
+	.playlist{
+        flex-direction: column;
+    }
+    .playlist_capa{
+        align-self: initial;
+    }
+
+    .playlist_musicas{
+        width: 75%;
+    } 
 }

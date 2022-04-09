@@ -1,9 +1,14 @@
 const rock = [
-  { musica: "/audio/ukulele.mp3" },
-  { musica: "/audio/ukulele.mp3" },
-  { musica: "/audio/ukulele.mp3" },
-  { musica: "/audio/ukulele.mp3" },
-  { musica: "/audio/ukulele.mp3" },
+  { musica: "/audio/ukulele.mp3",
+    musicaNome: "Aquarela" },
+  { musica: "/audio/littleidea.mp3",
+  musicaNome: "Tempos" },
+  { musica: "/audio/jazzyfrenchy.mp3",
+  musicaNome: "Hey" },
+  { musica: "/audio/hey.mp3",
+  musicaNome: "Happy Rock" },
+  { musica: "/audio/happyrock.mp3",
+  musicaNome: "Little" },
 ];
 
 const brasil = [

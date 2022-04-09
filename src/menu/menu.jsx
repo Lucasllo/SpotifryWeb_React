@@ -14,6 +14,11 @@ function Menu(){
             <nav className="cabecalho_menu">
                 <ul>
                     <li className="cabecalho_menu-item">
+                        <Link to="/playlists">
+                            Playlist
+                        </Link>
+                    </li>
+                    <li className="cabecalho_menu-item">
                         <Link to="/suporte">
                             Suporte
                         </Link>
@@ -26,11 +31,6 @@ function Menu(){
                     <li className="cabecalho_menu-item">
                         <Link to="/login">
                             Login
-                        </Link>
-                    </li>
-                    <li className="cabecalho_menu-item">
-                        <Link to="/playlists">
-                            Playlist
                         </Link>
                     </li>
                 </ul>
