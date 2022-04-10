@@ -7,6 +7,7 @@ function Cadastro() {
 
   const [nome, setNome] = useState();
   const [email, setEmail] = useState();
+  const [confirmaEmail, setConfirmaEmail] = useState();
   const [senha, setSenha] = useState();
   const [dataNascimento, setNascimento] = useState();
   const [cpf, setCpf] = useState();
@@ -14,6 +15,7 @@ function Cadastro() {
   const [logradouro, setLogradouro] = useState();
   const [cidade, setCidade] = useState();
   const [estado, setEstado] = useState();
+  const dadosSalvos = [];
 
   const dados = [
     {
@@ -23,6 +25,10 @@ function Cadastro() {
     {
       campo: email,
       evento: setEmail
+    },
+    {
+      campo: confirmaEmail,
+      evento: setConfirmaEmail
     },
     {
       campo: senha,
@@ -54,12 +60,39 @@ function Cadastro() {
     }
   ]
 
+  function salvar(e){
+    e.preventDefault();
+    const dadoSalvo = {
+      nome: nome,
+      email:email,
+      senha: senha,
+      dataNascimento: dataNascimento,
+      cpf: cpf,
+      cep: cep,
+      logradouro: logradouro,
+      cidade: cidade,
+      estado: estado
+    }
+    dadosSalvos.push(dadoSalvo);
+    console.log(dadosSalvos);
+    setNome("");
+    setEmail("");
+    setConfirmaEmail("");
+    setSenha("");
+    setNascimento("");
+    setCpf("");
+    setCep("");
+    setLogradouro("");
+    setCidade("");
+    setEstado("");
+    alert("Cadastrado Com Sucesso!")
+  }
 
   return (
     <main className="cadastro">
       <section className="cadastro_caixa">
         <h2>Cadastro</h2>
-        <form  action="" className="formulario ">
+        <form onSubmit={salvar} action="" className="formulario ">
           <fieldset>
             <legend className="cadastro_formulario_legenda">
               Informações básicas

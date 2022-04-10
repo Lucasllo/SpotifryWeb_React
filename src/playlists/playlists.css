@@ -30,7 +30,7 @@
 }
 
 .playlist_musicas li{
-    background-color:  var(--azul-meio-escuro);
+    background-color:  var(--azul);
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -41,8 +41,12 @@
 
 .playlist_musicas{
     width: 35%;
-    color: var(--laranja);
+    color: var(--cinza-claro);
     font-weight: bold;
+}
+
+.playlist_musicas li:hover{
+    color: var(--laranja);
 }
 
 .playlist_musicas ul{

@@ -18,6 +18,15 @@ const inforBasica = [
     class:"cadastro_formulario_caixa",
     position: 1
 },{
+    name: "confirmaEmail",
+    id:"confirmaEmail",
+    type:"email",
+    placeholder:" ",
+    required:true,
+    label: "Confirmar E-mail",
+    class:"cadastro_formulario_caixa",
+    position: 2
+},{
     name: "senha",
     id:"senha",
     type:"text",
@@ -25,7 +34,7 @@ const inforBasica = [
     required:true,
     label: "Senha",
     class:"cadastro_formulario_caixa",
-    position: 2
+    position: 3
 }
 ]
 
@@ -37,7 +46,7 @@ const inforPessoal = [{
     required:true,
     label: "Data de Nascimento",
     class:"cadastro_formulario_caixa",
-    position: 3
+    position: 4
 },{
     name: "cpf",
     id:"cpf",
@@ -46,7 +55,7 @@ const inforPessoal = [{
     required:true,
     label: "CPF",
     class:"cadastro_formulario_caixa",
-    position: 4
+    position: 5
 }]
 
 const endereco = [{
@@ -57,7 +66,7 @@ const endereco = [{
     required:true,
     label: "CEP",
     class:"cadastro_formulario_caixa",
-    position: 5
+    position: 6
 },{
     name: "logradouro",
     id:"logradouro",
@@ -66,7 +75,7 @@ const endereco = [{
     required:true,
     label: "Logradouro",
     class:"cadastro_formulario_caixa",
-    position: 6
+    position: 7
 },{
     name: "cidade",
     id:"cidade",
@@ -75,7 +84,7 @@ const endereco = [{
     required:true,
     label: "Cidade",
     class:"cadastro_formulario_caixa",
-    position: 7
+    position: 8
 },{
     name: "estado",
     id:"estado",
@@ -84,7 +93,7 @@ const endereco = [{
     required:true,
     label: "Estado",
     class:"cadastro_formulario_caixa",
-    position: 8
+    position: 9
 }]
 
 const login = [{
@@ -95,7 +104,7 @@ const login = [{
     required:true,
     label: "E-mail",
     class:"login_formulario_caixa",
-    position: 9
+    position: 10
 },{
     name: "Senha",
     id:"Senha",
@@ -104,7 +113,7 @@ const login = [{
     required:true,
     label: "Senha",
     class:"login_formulario_caixa",
-    position: 10
+    position: 11
 }]
 
 export function infoBasic(){

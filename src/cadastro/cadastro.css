@@ -45,7 +45,7 @@
 
 .cadastro_formulario_caixa input:focus + label, .cadastro_formulario_caixa input:not(:placeholder-shown) + label{
     font-size: 1rem;
-    bottom: 25px;
+    bottom: 30px;
 }
 
 label{
