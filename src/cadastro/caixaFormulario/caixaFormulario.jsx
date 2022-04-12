@@ -9,6 +9,7 @@ function CaixaFormulario(props){
           required={props.required}
           onChange={e => props.evento(e.target.value)}
           value={props.campo}
+          onBlur={props.name == "confirmaEmail" ? props.valida : null}
         />
         <label htmlFor={props.name}>{props.label}</label>
       </div>

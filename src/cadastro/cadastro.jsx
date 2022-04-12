@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./cadastro.css";
 import CaixaFormulario from "./caixaFormulario/caixaFormulario";
 import { enderec, infoBasic, infoPess } from "./caixaFormulario/dadosFormulario";
+import usuario from "./usuario";
 
 function Cadastro() {
 
@@ -15,7 +16,6 @@ function Cadastro() {
   const [logradouro, setLogradouro] = useState();
   const [cidade, setCidade] = useState();
   const [estado, setEstado] = useState();
-  const dadosSalvos = [];
 
   const dados = [
     {
@@ -60,21 +60,7 @@ function Cadastro() {
     }
   ]
 
-  function salvar(e){
-    e.preventDefault();
-    const dadoSalvo = {
-      nome: nome,
-      email:email,
-      senha: senha,
-      dataNascimento: dataNascimento,
-      cpf: cpf,
-      cep: cep,
-      logradouro: logradouro,
-      cidade: cidade,
-      estado: estado
-    }
-    dadosSalvos.push(dadoSalvo);
-    console.log(dadosSalvos);
+  function limparFormulario(){
     setNome("");
     setEmail("");
     setConfirmaEmail("");
@@ -85,14 +71,27 @@ function Cadastro() {
     setLogradouro("");
     setCidade("");
     setEstado("");
+  }
+
+  function salvar(e){
+    e.preventDefault();
+    usuario.push({nome, email, senha, dataNascimento, cpf, cep, logradouro, cidade, estado});
+    console.log(usuario);
+    limparFormulario();
     alert("Cadastrado Com Sucesso!")
+  }
+
+  function valida(){
+    if(email != confirmaEmail){
+      alert("Emails não conferem")
+    }
   }
 
   return (
     <main className="cadastro">
       <section className="cadastro_caixa">
         <h2>Cadastro</h2>
-        <form onSubmit={salvar} action="" className="formulario ">
+        <form onSubmit={salvar} className="formulario ">
           <fieldset>
             <legend className="cadastro_formulario_legenda">
               Informações básicas
@@ -110,6 +109,7 @@ function Cadastro() {
                   label={item.label}
                   campo={dados[item.position].campo}
                   evento={v => dados[item.position].evento(v)}
+                  valida={valida}
                 />
               )
             })}

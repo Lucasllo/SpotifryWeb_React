@@ -16,6 +16,11 @@ img{
   width: 100%;
 }
 
+/* sobrepor css do bootstrap */
+ul{
+  padding-left: 0px;
+}
+
 /* .container{
   width: 80%;
   margin: auto;

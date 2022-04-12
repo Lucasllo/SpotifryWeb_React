@@ -71,4 +71,8 @@
     .playlist_musicas{
         width: 75%;
     } 
+
+    .playlists li{
+        width: 50%;
+    }
 }
