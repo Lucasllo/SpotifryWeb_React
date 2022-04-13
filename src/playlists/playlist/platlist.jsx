@@ -11,8 +11,6 @@ function Playlist() {
     const playlistCapas = playlists().find((p) => p.id == params.id);
     const playlistSelecionada = listas().find((p) => p.id == params.id);
 
-    const [playing, setPlaying] = useState(false);
-
     return (
         <div className="playlist">
 
@@ -30,8 +28,6 @@ function Playlist() {
                                 key={index}
                                 musica={item.musica}
                                 musicaNome={item.musicaNome}
-                                playing = {playing}
-                                setPlaying = {v => setPlaying(v)}
                             />
                         )
                     })}
