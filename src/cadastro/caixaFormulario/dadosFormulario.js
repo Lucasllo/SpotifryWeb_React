@@ -104,7 +104,7 @@ const login = [{
     required:true,
     label: "E-mail",
     class:"login_formulario_caixa",
-    position: 10
+    position: 0
 },{
     name: "Senha",
     id:"Senha",
@@ -113,7 +113,7 @@ const login = [{
     required:true,
     label: "Senha",
     class:"login_formulario_caixa",
-    position: 11
+    position: 1
 }]
 
 export function infoBasic(){

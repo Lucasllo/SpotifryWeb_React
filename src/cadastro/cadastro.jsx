@@ -3,6 +3,7 @@ import "./cadastro.css";
 import CaixaFormulario from "./caixaFormulario/caixaFormulario";
 import { enderec, infoBasic, infoPess } from "./caixaFormulario/dadosFormulario";
 import usuario from "./usuario";
+import axios from "axios";
 
 function Cadastro() {
 
@@ -60,7 +61,7 @@ function Cadastro() {
     }
   ]
 
-  function limparFormulario(){
+  function limparFormulario() {
     setNome("");
     setEmail("");
     setConfirmaEmail("");
@@ -73,16 +74,21 @@ function Cadastro() {
     setEstado("");
   }
 
-  function salvar(e){
+  function salvar(e) {
     e.preventDefault();
-    usuario.push({nome, email, senha, dataNascimento, cpf, cep, logradouro, cidade, estado});
-    console.log(usuario);
+    axios.post('http://localhost:3001/usuario', {
+      nome, email, senha, dataNascimento, cpf, cep, logradouro, cidade, estado 
+    })
+      .then(resposta => console.log(resposta.data))
+      .catch(function (error) {
+        console.log(error);
+      });
     limparFormulario();
     alert("Cadastrado Com Sucesso!")
   }
 
-  function valida(){
-    if(email != confirmaEmail){
+  function valida() {
+    if (email != confirmaEmail) {
       alert("Emails não conferem")
     }
   }
@@ -154,7 +160,7 @@ function Cadastro() {
               )
             })}
           </fieldset>
-          <div className ="cadastro_formulario_enviar">
+          <div className="cadastro_formulario_enviar">
             <input
               className="cadastro_formulario_botao"
               type="submit"

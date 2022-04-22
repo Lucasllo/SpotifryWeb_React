@@ -1,0 +1,238 @@
+{
+  "playlist": [
+    {
+      "id": 1,
+      "imagem": "/img/playlist1.png",
+      "musicas": [
+        {
+          "musica": "/audio/ukulele.mp3",
+          "musicaNome": "Aquarela"
+        },
+        {
+          "musica": "/audio/littleidea.mp3",
+          "musicaNome": "Tempos"
+        },
+        {
+          "musica": "/audio/jazzyfrenchy.mp3",
+          "musicaNome": "Hey"
+        },
+        {
+          "musica": "/audio/hey.mp3",
+          "musicaNome": "Happy Rock"
+        },
+        {
+          "musica": "/audio/happyrock.mp3",
+          "musicaNome": "Little"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "imagem": "/img/playlist2.png",
+      "musicas": [
+        {
+          "musica": "/audio/ukulele.mp3",
+          "musicaNome": "Aquarela"
+        },
+        {
+          "musica": "/audio/littleidea.mp3",
+          "musicaNome": "Tempos"
+        },
+        {
+          "musica": "/audio/jazzyfrenchy.mp3",
+          "musicaNome": "Hey"
+        },
+        {
+          "musica": "/audio/hey.mp3",
+          "musicaNome": "Happy Rock"
+        },
+        {
+          "musica": "/audio/happyrock.mp3",
+          "musicaNome": "Little"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "imagem": "/img/playlist3.png",
+      "musicas": [
+        {
+          "musica": "/audio/ukulele.mp3",
+          "musicaNome": "Aquarela"
+        },
+        {
+          "musica": "/audio/littleidea.mp3",
+          "musicaNome": "Tempos"
+        },
+        {
+          "musica": "/audio/jazzyfrenchy.mp3",
+          "musicaNome": "Hey"
+        },
+        {
+          "musica": "/audio/hey.mp3",
+          "musicaNome": "Happy Rock"
+        },
+        {
+          "musica": "/audio/happyrock.mp3",
+          "musicaNome": "Little"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "imagem": "/img/playlist4.png",
+      "musicas": [
+        {
+          "musica": "/audio/ukulele.mp3",
+          "musicaNome": "Aquarela"
+        },
+        {
+          "musica": "/audio/littleidea.mp3",
+          "musicaNome": "Tempos"
+        },
+        {
+          "musica": "/audio/jazzyfrenchy.mp3",
+          "musicaNome": "Hey"
+        },
+        {
+          "musica": "/audio/hey.mp3",
+          "musicaNome": "Happy Rock"
+        },
+        {
+          "musica": "/audio/happyrock.mp3",
+          "musicaNome": "Little"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "imagem": "/img/playlist5.png",
+      "musicas": [
+        {
+          "musica": "/audio/ukulele.mp3",
+          "musicaNome": "Aquarela"
+        },
+        {
+          "musica": "/audio/littleidea.mp3",
+          "musicaNome": "Tempos"
+        },
+        {
+          "musica": "/audio/jazzyfrenchy.mp3",
+          "musicaNome": "Hey"
+        },
+        {
+          "musica": "/audio/hey.mp3",
+          "musicaNome": "Happy Rock"
+        },
+        {
+          "musica": "/audio/happyrock.mp3",
+          "musicaNome": "Little"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "imagem": "/img/playlist6.png",
+      "musicas": [
+        {
+          "musica": "/audio/ukulele.mp3",
+          "musicaNome": "Aquarela"
+        },
+        {
+          "musica": "/audio/littleidea.mp3",
+          "musicaNome": "Tempos"
+        },
+        {
+          "musica": "/audio/jazzyfrenchy.mp3",
+          "musicaNome": "Hey"
+        },
+        {
+          "musica": "/audio/hey.mp3",
+          "musicaNome": "Happy Rock"
+        },
+        {
+          "musica": "/audio/happyrock.mp3",
+          "musicaNome": "Little"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "imagem": "/img/playlist7.png",
+      "musicas": [
+        {
+          "musica": "/audio/ukulele.mp3",
+          "musicaNome": "Aquarela"
+        },
+        {
+          "musica": "/audio/littleidea.mp3",
+          "musicaNome": "Tempos"
+        },
+        {
+          "musica": "/audio/jazzyfrenchy.mp3",
+          "musicaNome": "Hey"
+        },
+        {
+          "musica": "/audio/hey.mp3",
+          "musicaNome": "Happy Rock"
+        },
+        {
+          "musica": "/audio/happyrock.mp3",
+          "musicaNome": "Little"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "imagem": "/img/playlist8.png",
+      "musicas": [
+        {
+          "musica": "/audio/ukulele.mp3",
+          "musicaNome": "Aquarela"
+        },
+        {
+          "musica": "/audio/littleidea.mp3",
+          "musicaNome": "Tempos"
+        },
+        {
+          "musica": "/audio/jazzyfrenchy.mp3",
+          "musicaNome": "Hey"
+        },
+        {
+          "musica": "/audio/hey.mp3",
+          "musicaNome": "Happy Rock"
+        },
+        {
+          "musica": "/audio/happyrock.mp3",
+          "musicaNome": "Little"
+        }
+      ]
+    }
+  ],
+  "usuario": [
+    {
+      "nome": "Lucas Lopes",
+      "email": "lucaslopesoliveira@gmail.com",
+      "senha": "1234",
+      "dataNascimento": "2022-04-12",
+      "cpf": "123",
+      "cep": "60312-060",
+      "logradouro": "123",
+      "cidade": "Fortaleza",
+      "estado": "Ceará",
+      "id": 1
+    },
+    {
+      "nome": "asd@asdad",
+      "email": "asd@asdad",
+      "senha": "asd@asdad",
+      "dataNascimento": "2022-04-14",
+      "cpf": "asd@asdad",
+      "cep": "asd@asdad",
+      "logradouro": "asd@asdad",
+      "cidade": "asd@asdad",
+      "estado": "asd@asdad",
+      "id": 2
+    }
+  ]
+}
