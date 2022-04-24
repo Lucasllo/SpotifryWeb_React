@@ -9,8 +9,11 @@ import Login from "./login/login";
 import { Routes, Route } from "react-router-dom";
 import Playlists from "./playlists/playlists";
 import Playlist from "./playlists/playlist/platlist";
+import MenuLogado from "./menu/menuLogado/menuLogado";
+import EditaPerfil from "./menu/menuLogado/editaPerfil/editaPerfil";
 
 function App() {
+
   return (
     <>
       <Menu />
@@ -21,9 +24,10 @@ function App() {
         <Route element={<Cadastro />} path="/cadastro"></Route>
         <Route element={<Playlists />} path="/playlists"></Route>
         <Route element={<Playlist />} path="/playlist/:id"></Route>
+        <Route element={<MenuLogado />} path="/menulogado/:id">
+        </Route>
       </Routes>
       <Rodape />
-      
     </>
   );
 }

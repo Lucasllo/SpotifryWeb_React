@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './playlists.css'
-// import playlists from './playlists_imagens/playlists_imagens';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 

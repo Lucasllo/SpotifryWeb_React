@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CaixaFormulario from "../cadastro/caixaFormulario/caixaFormulario";
 import { log } from "../cadastro/caixaFormulario/dadosFormulario";
 import "./login.css";
@@ -7,6 +7,7 @@ import { useState } from "react";
 
 function Login() {
 
+  const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
   const [logado, setLogado] = useState(false);
@@ -25,12 +26,13 @@ function Login() {
   function logar(e) {
     e.preventDefault();
     axios.get("http://localhost:3001/usuario")
-      .then((resp) =>
-        resp.data.forEach((item) => {
-          if (item.email == email && item.senha == senha) {
-            setLogado(true);
-          }
-        })
+      .then((resp) => {
+        let login = resp.data.find((p) => p.email == email && p.senha == senha);
+        if (login) {
+          setLogado(true);
+          navigate(`/menulogado/${login.id}`, { replace: true })
+        }
+      }
       );
   }
 

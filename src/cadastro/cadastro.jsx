@@ -17,6 +17,7 @@ function Cadastro() {
   const [logradouro, setLogradouro] = useState();
   const [cidade, setCidade] = useState();
   const [estado, setEstado] = useState();
+  const playlist = [];
 
   const dados = [
     {
