@@ -223,15 +223,15 @@
       "id": 1
     },
     {
-      "nome": "asd@asdad",
+      "nome": "asdas",
       "email": "asd@asdad",
-      "senha": "asd@asdad",
+      "senha": "asd",
       "dataNascimento": "2022-04-14",
-      "cpf": "asd@asdad",
-      "cep": "asd@asdad",
-      "logradouro": "asd@asdad",
-      "cidade": "asd@asdad",
-      "estado": "asd@asdad",
+      "cpf": "2022-04-14",
+      "cep": "asd",
+      "logradouro": "asd",
+      "cidade": "asd",
+      "estado": "asd",
       "id": 2
     }
   ]

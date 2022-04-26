@@ -11,21 +11,41 @@ import Playlists from "./playlists/playlists";
 import Playlist from "./playlists/playlist/platlist";
 import MenuLogado from "./menu/menuLogado/menuLogado";
 import EditaPerfil from "./menu/menuLogado/editaPerfil/editaPerfil";
+import { useState } from "react";
 
 function App() {
 
+  const [logado, setLogado] = useState(false);
+  const [perfilLogado, setPerfil] = useState();
+
   return (
     <>
-      <Menu />
+      {!logado ? 
+        <Menu /> : 
+        <MenuLogado 
+          perfilLogado={perfilLogado}
+          setLogado={setLogado}
+        />
+      }
       <Routes>
         <Route element={<Index />} exact path="/"></Route>
         <Route element={<Suporte />} path="/suporte"></Route>
-        <Route element={<Login />} path="/login"></Route>
+        <Route 
+          element={
+            <Login 
+              setPerfil={setPerfil}
+              logado={logado}
+              setLogado={setLogado}
+            />
+          } 
+          path="/login">
+        </Route>
         <Route element={<Cadastro />} path="/cadastro"></Route>
         <Route element={<Playlists />} path="/playlists"></Route>
         <Route element={<Playlist />} path="/playlist/:id"></Route>
         <Route element={<MenuLogado />} path="/menulogado/:id">
         </Route>
+        <Route element={<EditaPerfil />} path="/menulogado/:id/editarPerfil"></Route>
       </Routes>
       <Rodape />
     </>

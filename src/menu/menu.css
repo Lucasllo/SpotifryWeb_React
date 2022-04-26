@@ -29,7 +29,7 @@
     width: 40%;
 }
 
-.cabecalho_menu ul{
+.cabecalho_menu ul, .cabecalho_menu--logado>ul {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -67,7 +67,7 @@
         flex-direction: row;
     }
 
-    .cabecalho_menu>ul {
+    .cabecalho_menu>ul, .cabecalho_menu--logado>ul {
         flex-direction: row;
     }
 }
@@ -75,6 +75,10 @@
 @media screen and (min-width:  1024px) {
     .cabecalho_menu{
         width: 40%;
+    }
+
+    .cabecalho_menu--logado{
+        width: 55%;
     }
 
 	.cabecalho{

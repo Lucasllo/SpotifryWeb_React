@@ -5,12 +5,11 @@ import "./login.css";
 import axios from "axios";
 import { useState } from "react";
 
-function Login() {
+function Login({setPerfil, logado, setLogado}) {
 
   const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
-  const [logado, setLogado] = useState(false);
 
   const dados = [
     {
@@ -30,7 +29,8 @@ function Login() {
         let login = resp.data.find((p) => p.email == email && p.senha == senha);
         if (login) {
           setLogado(true);
-          navigate(`/menulogado/${login.id}`, { replace: true })
+          setPerfil(login.id);
+          navigate(`/menulogado/${login.id}/editarPerfil`, {state:{id:login.id}}, { replace: true })
         }
       }
       );
