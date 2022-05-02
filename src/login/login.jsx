@@ -5,7 +5,7 @@ import "./login.css";
 import axios from "axios";
 import { useState } from "react";
 
-function Login({setPerfil, logado, setLogado}) {
+function Login({setEstaLogado}) {
 
   const navigate = useNavigate();
   const [email, setEmail] = useState();
@@ -28,9 +28,9 @@ function Login({setPerfil, logado, setLogado}) {
       .then((resp) => {
         let login = resp.data.find((p) => p.email == email && p.senha == senha);
         if (login) {
-          setLogado(true);
-          setPerfil(login.id);
-          navigate(`/menulogado/${login.id}/editarPerfil`, {state:{id:login.id}}, { replace: true })
+          localStorage.setItem('usuarioLogado', JSON.stringify(login.id));
+          setEstaLogado(JSON.parse(localStorage.getItem('usuarioLogado')));
+          navigate(`/menulogado/${login.id}/musicas`, {state:{id:login.id}}, { replace: true })
         }
       }
       );
@@ -40,7 +40,6 @@ function Login({setPerfil, logado, setLogado}) {
     <main className="login">
       <section className="login_caixa">
         <h2>Login</h2>
-        <h1>{logado ? "está logado" : ""}</h1>
         <form onSubmit={logar} className="login_formulario">
           {log().map(item => {
             return (

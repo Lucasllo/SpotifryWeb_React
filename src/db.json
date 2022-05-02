@@ -220,19 +220,98 @@
       "logradouro": "123",
       "cidade": "Fortaleza",
       "estado": "Ceará",
+      "playlists": [],
       "id": 1
     },
     {
-      "nome": "asdas",
+      "nome": "asd",
       "email": "asd@asdad",
       "senha": "asd",
       "dataNascimento": "2022-04-14",
-      "cpf": "2022-04-14",
+      "cpf": "123456789-5",
       "cep": "asd",
       "logradouro": "asd",
       "cidade": "asd",
       "estado": "asd",
+      "playlists": [],
       "id": 2
+    }
+  ],
+  "musicas": [
+    {
+      "musica": "/audio/ukulele.mp3",
+      "musicaNome": "Aquarela",
+      "id": 1
+    },
+    {
+      "musica": "/audio/littleidea.mp3",
+      "musicaNome": "Tempos",
+      "id": 2
+    },
+    {
+      "musica": "/audio/jazzyfrenchy.mp3",
+      "musicaNome": "Hey",
+      "id": 3
+    },
+    {
+      "musica": "/audio/hey.mp3",
+      "musicaNome": "Happy Rock",
+      "id": 4
+    },
+    {
+      "musica": "/audio/happyrock.mp3",
+      "musicaNome": "Little",
+      "id": 5
+    },
+    {
+      "musica": "/audio/ukulele.mp3",
+      "musicaNome": "Pretty",
+      "id": 6
+    },
+    {
+      "musica": "/audio/littleidea.mp3",
+      "musicaNome": "Don't Lie",
+      "id": 7
+    },
+    {
+      "musica": "/audio/jazzyfrenchy.mp3",
+      "musicaNome": "WTF",
+      "id": 8
+    },
+    {
+      "musica": "/audio/hey.mp3",
+      "musicaNome": "Ghostbusters",
+      "id": 9
+    },
+    {
+      "musica": "/audio/happyrock.mp3",
+      "musicaNome": "Cute",
+      "id": 10
+    },
+    {
+      "musica": "/audio/ukulele.mp3",
+      "musicaNome": "Creative",
+      "id": 11
+    },
+    {
+      "musica": "/audio/littleidea.mp3",
+      "musicaNome": "Beginning",
+      "id": 12
+    },
+    {
+      "musica": "/audio/jazzyfrenchy.mp3",
+      "musicaNome": "Minds",
+      "id": 13
+    },
+    {
+      "musica": "/audio/hey.mp3",
+      "musicaNome": "Jazzfrenchy",
+      "id": 14
+    },
+    {
+      "musica": "/audio/happyrock.mp3",
+      "musicaNome": "A new idea",
+      "id": 15
     }
   ]
 }

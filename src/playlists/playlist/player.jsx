@@ -25,7 +25,7 @@ function Player(props) {
             <div className="playlist_musicas_play">
                 <img src={botao} alt="" />
             </div>
-            <div>
+            <div className="playlist_musicas_titulo">
                 <span>{props.musicaNome}</span>
             </div>
         </li>

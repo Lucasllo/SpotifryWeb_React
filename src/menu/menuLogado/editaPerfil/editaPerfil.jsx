@@ -6,9 +6,6 @@ import { enderec, infoBasic } from "./dadosFormularioEdita";
 
 export default function EditaPerfil() {
     const location = useLocation();
-    const [email, setEmail] = useState();
-    const [dataNascimento, setNascimento] = useState();
-    const [cpf, setCpf] = useState();
 
     const [nome, setNome] = useState();
     const [senha, setSenha] = useState();
@@ -16,8 +13,6 @@ export default function EditaPerfil() {
     const [logradouro, setLogradouro] = useState();
     const [cidade, setCidade] = useState();
     const [estado, setEstado] = useState();
-
-    console.log(location.state.id)
 
     const dados = [
         {
@@ -49,9 +44,11 @@ export default function EditaPerfil() {
     useEffect(() => {
         axios.get(`http://localhost:3001/usuario/${location.state.id}`)
             .then((resp) => {
-                setEmail(resp.data.email);
-                setCpf(resp.data.dataNascimento);
-                setNascimento(resp.data.dataNascimento);
+                setNome(resp.data.nome);
+                setCep(resp.data.cep);
+                setLogradouro(resp.data.logradouro);
+                setCidade(resp.data.cidade);
+                setEstado(resp.data.estado);
             }
             );
     }, [])
@@ -67,8 +64,8 @@ export default function EditaPerfil() {
 
     function salvar(e) {
         e.preventDefault();
-        axios.put(`http://localhost:3001/usuario/${location.state.id}`, {
-            nome, email, senha, dataNascimento, cpf, cep, logradouro, cidade, estado
+        axios.patch(`http://localhost:3001/usuario/${location.state.id}`, {
+            nome, senha, cep, logradouro, cidade, estado
         })
             .then(resposta => console.log(resposta.data))
             .catch(function (error) {

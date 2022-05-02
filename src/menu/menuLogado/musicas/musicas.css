@@ -1,0 +1,29 @@
+.musicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.musicas__itens {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.musicas__item {
+    width: 500px;
+}
+
+.musicas__buscar {
+    border-bottom: 1px solid gray;
+    width: 400px;
+}
+
+.musicas__buscar input {
+    color: gray;
+    border: none;
+    font-size: 1.35rem;
+    font-weight: bold;
+    outline: none;
+    width: 100%;
+}

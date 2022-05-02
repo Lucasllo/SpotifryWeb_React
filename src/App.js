@@ -12,40 +12,34 @@ import Playlist from "./playlists/playlist/platlist";
 import MenuLogado from "./menu/menuLogado/menuLogado";
 import EditaPerfil from "./menu/menuLogado/editaPerfil/editaPerfil";
 import { useState } from "react";
+import CriaPlaylist from "./menu/menuLogado/criaPlaylist/criaPlaylist";
+import Musicas from "./menu/menuLogado/musicas/musicas";
 
 function App() {
 
-  const [logado, setLogado] = useState(false);
-  const [perfilLogado, setPerfil] = useState();
+  const logado = JSON.parse(localStorage.getItem('usuarioLogado'));
+  const [estaLogado, setEstaLogado] = useState(logado);
 
   return (
     <>
-      {!logado ? 
+      {!estaLogado ? 
         <Menu /> : 
-        <MenuLogado 
-          perfilLogado={perfilLogado}
-          setLogado={setLogado}
-        />
+        <MenuLogado />
       }
       <Routes>
         <Route element={<Index />} exact path="/"></Route>
         <Route element={<Suporte />} path="/suporte"></Route>
-        <Route 
-          element={
-            <Login 
-              setPerfil={setPerfil}
-              logado={logado}
-              setLogado={setLogado}
-            />
-          } 
-          path="/login">
-        </Route>
+        <Route element={ <Login setEstaLogado = {setEstaLogado}/>} path="/login"></Route>
         <Route element={<Cadastro />} path="/cadastro"></Route>
         <Route element={<Playlists />} path="/playlists"></Route>
         <Route element={<Playlist />} path="/playlist/:id"></Route>
-        <Route element={<MenuLogado />} path="/menulogado/:id">
-        </Route>
+        <Route 
+          element={<MenuLogado setEstaLogado = {setEstaLogado}/>} 
+          path="/menulogado/:id"
+        ></Route>
         <Route element={<EditaPerfil />} path="/menulogado/:id/editarPerfil"></Route>
+        <Route element={<CriaPlaylist />} path="/menulogado/:id/criarPlaylist"></Route>
+        <Route element={<Musicas />} path="/menulogado/:id/musicas"></Route>
       </Routes>
       <Rodape />
     </>
