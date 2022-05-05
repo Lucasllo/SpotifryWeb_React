@@ -233,7 +233,23 @@
       "logradouro": "asd",
       "cidade": "asd",
       "estado": "asd",
-      "playlists": [],
+      "playlists": [
+        {
+          "id": 2,
+          "musicaNome": "Tempos",
+          "musica": "/audio/littleidea.mp3"
+        },
+        {
+          "id": 1,
+          "musicaNome": "Aquarela",
+          "musica": "/audio/ukulele.mp3"
+        },
+        {
+          "id": 15,
+          "musicaNome": "A new idea",
+          "musica": "/audio/happyrock.mp3"
+        }
+      ],
       "id": 2
     }
   ],

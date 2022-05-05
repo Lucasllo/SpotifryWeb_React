@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import Player from '../../../../playlists/playlist/player';
 import './checkBox.css'
 
-export default function Checkbox({ item, index, setMusicasSelecionadas, musicasSelecionadas }) {
+export default function Checkbox({musicasPlay, item, index, setMusicasSelecionadas, musicasSelecionadas }) {    
+    // const [checado, setChecado] = useState();
 
     const [check, setCheck] = useState(false);
 
@@ -21,6 +22,7 @@ export default function Checkbox({ item, index, setMusicasSelecionadas, musicasS
             ...musicasSelecionadas.slice(musicSelecionada + 1)
         ]);
     };
+    
 
     return (
         <div className="checkBox">

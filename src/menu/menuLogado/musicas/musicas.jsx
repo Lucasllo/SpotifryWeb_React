@@ -1,15 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router";
 import Player from "../../../playlists/playlist/player";
 import './musicas.css'
 
 export default function Musicas() {
-    const location = useLocation();
-
     const [musicas, setMusicas] = useState([]);
-
-    const [musicasSelecionadas, setMusicasSelecionadas] = useState([]);
 
     const [buscar, setBuscar] = useState("");
 
@@ -32,18 +27,6 @@ export default function Musicas() {
                 setLista(resp.data)
             });
     }, [])
-
-    function salvar(e) {
-        e.preventDefault();
-        axios.patch(`http://localhost:3001/usuario/${location.state.id}`, {
-            playlists: musicasSelecionadas
-        })
-            .then(resposta => console.log(resposta.data))
-            .catch(function (error) {
-                console.log(error);
-            });
-        console.log("cadastrado com sucesso");
-    }
 
     return (
         <div className="musicas">

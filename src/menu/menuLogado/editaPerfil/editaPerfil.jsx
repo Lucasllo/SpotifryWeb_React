@@ -1,11 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import CaixaFormulario from "../../../cadastro/caixaFormulario/caixaFormulario";
 import { enderec, infoBasic } from "./dadosFormularioEdita";
 
 export default function EditaPerfil() {
-    const location = useLocation();
+    const user =JSON.parse(localStorage.getItem('usuarioLogado'));
 
     const [nome, setNome] = useState();
     const [senha, setSenha] = useState();
@@ -42,7 +41,7 @@ export default function EditaPerfil() {
     ]
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/usuario/${location.state.id}`)
+        axios.get(`http://localhost:3001/usuario/${user}`)
             .then((resp) => {
                 setNome(resp.data.nome);
                 setCep(resp.data.cep);
@@ -64,7 +63,7 @@ export default function EditaPerfil() {
 
     function salvar(e) {
         e.preventDefault();
-        axios.patch(`http://localhost:3001/usuario/${location.state.id}`, {
+        axios.patch(`http://localhost:3001/usuario/${user}`, {
             nome, senha, cep, logradouro, cidade, estado
         })
             .then(resposta => console.log(resposta.data))

@@ -2,11 +2,10 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Checkbox from './checkBox/checkBox';
 import './criaPlaylist.css'
-import { useLocation } from 'react-router';
 
 export default function CriaPlaylist() {
 
-    const location = useLocation();
+    const user =JSON.parse(localStorage.getItem('usuarioLogado'));
 
     const [musicas, setMusicas] = useState([]);
 
@@ -16,10 +15,17 @@ export default function CriaPlaylist() {
 
     const [lista, setLista] = useState([]);
 
+    const [musicasPlay, setMusicasPlay] = useState([]);
+
     function testaBusca(nomeMusica) {
         const regex = new RegExp(buscar, 'i');
         return regex.test(nomeMusica);
     }
+
+    useEffect(()=>{
+        console.log(musicasSelecionadas);
+        console.log(musicasPlay);
+    }, [musicasSelecionadas])
 
     useEffect(() => {
         const novaLista = musicas.filter(item => testaBusca(item.musicaNome))
@@ -32,18 +38,25 @@ export default function CriaPlaylist() {
                 setMusicas(resp.data)
                 setLista(resp.data)
             });
+
+        axios.get(`http://localhost:3001/usuario/${user}`)
+            .then((resp) => {
+                setMusicasPlay(resp.data.playlists)
+            });
     }, [])
 
+    
     function salvar(e) {
         e.preventDefault();
-        axios.patch(`http://localhost:3001/usuario/${location.state.id}`, {
+        
+        axios.patch(`http://localhost:3001/usuario/${user}`, {
             playlists: musicasSelecionadas
         })
             .then(resposta => console.log(resposta.data))
             .catch(function (error) {
                 console.log(error);
             });
-        console.log("cadastrado com sucesso");
+        alert("cadastrado com sucesso");
     }
 
     return (
@@ -57,17 +70,18 @@ export default function CriaPlaylist() {
                 />
             </div>
             <form onSubmit={salvar}>
-                {lista.map((item, index) => {
+                {lista.map((item) => {
                     return (
                         <Checkbox
+                            musicasPlay={musicasPlay}
                             item={item}
-                            index={index}
+                            index={item.id}
                             musicasSelecionadas={musicasSelecionadas}
                             setMusicasSelecionadas={setMusicasSelecionadas}
                         />
                     )
                 })}
-                <input type="submit" value="salvar" />
+                <input className="criaPlaylist__salvar" type="submit" value="salvar" />
             </form>
         </div>
     )
