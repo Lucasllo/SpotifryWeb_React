@@ -77,7 +77,7 @@ function Cadastro() {
 
   function salvar(e) {
     e.preventDefault();
-    axios.post('http://localhost:3001/usuario', {
+    axios.post('http://localhost:3001/usuarios', {
       nome, email, senha, dataNascimento, cpf, cep, logradouro, cidade, estado 
     })
       .then(resposta => console.log(resposta.data))

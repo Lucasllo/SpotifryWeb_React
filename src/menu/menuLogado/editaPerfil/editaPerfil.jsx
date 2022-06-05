@@ -41,7 +41,7 @@ export default function EditaPerfil() {
     ]
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/usuario/${user}`)
+        axios.get(`http://localhost:3001/usuarios/${user}`)
             .then((resp) => {
                 setNome(resp.data.nome);
                 setCep(resp.data.cep);
@@ -63,7 +63,7 @@ export default function EditaPerfil() {
 
     function salvar(e) {
         e.preventDefault();
-        axios.patch(`http://localhost:3001/usuario/${user}`, {
+        axios.patch(`http://localhost:3001/usuarios/${user}`, {
             nome, senha, cep, logradouro, cidade, estado
         })
             .then(resposta => console.log(resposta.data))

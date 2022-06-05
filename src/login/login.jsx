@@ -24,7 +24,7 @@ function Login({setEstaLogado}) {
 
   function logar(e) {
     e.preventDefault();
-    axios.get("http://localhost:3001/usuario")
+    axios.get("http://localhost:3001/usuarios")
       .then((resp) => {
         let login = resp.data.find((p) => p.email == email && p.senha == senha);
         if (login) {

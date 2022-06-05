@@ -43,11 +43,11 @@ export default function MenuLogado({ setEstaLogado }) {
                             <li className="cabecalho_menu-item">
                                 <Link
                                     to={{
-                                        pathname: `/menulogado/${logado}/criarPlaylist`
+                                        pathname: `/menulogado/${logado}/suasPlaylists`
                                     }}
                                     state={{ id: logado }}
                                 >
-                                    Sua PlayList
+                                    Suas PlayLists
                                 </Link>
                             </li>
                             <li className="cabecalho_menu-item">

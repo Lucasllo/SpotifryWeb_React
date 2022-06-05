@@ -14,6 +14,8 @@ import EditaPerfil from "./menu/menuLogado/editaPerfil/editaPerfil";
 import { useState } from "react";
 import CriaPlaylist from "./menu/menuLogado/criaPlaylist/criaPlaylist";
 import Musicas from "./menu/menuLogado/musicas/musicas";
+import SuasPlaylist from "./menu/menuLogado/suasPlaylist/suasPlaylist";
+import PlayEscolhida from "./menu/menuLogado/suasPlaylist/playEscolhida";
 
 function App() {
 
@@ -40,6 +42,8 @@ function App() {
         <Route element={<EditaPerfil />} path="/menulogado/:id/editarPerfil"></Route>
         <Route element={<CriaPlaylist />} path="/menulogado/:id/criarPlaylist"></Route>
         <Route element={<Musicas />} path="/menulogado/:id/musicas"></Route>
+        <Route element={<SuasPlaylist />} path="/menulogado/:id/suasPlaylists"></Route>
+        <Route element={<PlayEscolhida />} path="/menulogado/:id/playEscolhida"></Route>
       </Routes>
       <Rodape />
     </>

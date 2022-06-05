@@ -7,7 +7,7 @@ function Playlists() {
     const [playlists, setPlaylists] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3001/playlist")
+        axios.get("http://localhost:3001/playlists")
             .then((resp) => setPlaylists(resp.data));
     }, [])
 

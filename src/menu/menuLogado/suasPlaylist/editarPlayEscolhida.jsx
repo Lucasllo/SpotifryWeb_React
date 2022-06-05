@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Checkbox from './checkBox/checkBox';
-import './criaPlaylist.css'
 
-export default function CriaPlaylist() {
+export default function EditarPlayEscolhida() {
 
     const user =JSON.parse(localStorage.getItem('usuarioLogado'));
 

@@ -10,7 +10,7 @@ function Playlist() {
     var musicasSelecionadas;
 
     useEffect(() => {
-        axios.get("http://localhost:3001/playlist")
+        axios.get("http://localhost:3001/playlists")
             .then((resp) => setPlaylists(resp.data));
     }, [])
 
