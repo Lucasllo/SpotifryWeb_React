@@ -8,7 +8,7 @@ export default function SuasPlaylist() {
     const [playlists, setPlaylists] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/usuarios/${user}`)
+        axios.get(`http://localhost:3001/usuarios/${user}`) //playlists/?idUsuario=${user}
             .then((resp) => {
                 setPlaylists(resp.data.playlists)
             });
