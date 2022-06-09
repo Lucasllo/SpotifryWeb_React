@@ -34,7 +34,7 @@ export default function CriaPlaylist() {
                 setLista(resp.data)
             });
 
-        axios.get(`http://localhost:3001/usuarios/${user}`)
+        axios.get(`http://localhost:3001/playlists/?idUsuario=${user}`)
             .then((resp) => {
                 setMusicasPlay(resp.data.playlists)
             });
@@ -44,7 +44,7 @@ export default function CriaPlaylist() {
     function salvar(e) {
         e.preventDefault();
         
-        axios.patch(`http://localhost:3001/usuarios/${user}`, {
+        axios.post(`http://localhost:3001/playlists`, {
             playlists: musicasSelecionadas
         })
             .then(resposta => console.log(resposta.data))

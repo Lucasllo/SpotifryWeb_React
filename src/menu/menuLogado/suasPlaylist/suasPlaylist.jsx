@@ -6,11 +6,12 @@ export default function SuasPlaylist() {
     const user = JSON.parse(localStorage.getItem('usuarioLogado'));
 
     const [playlists, setPlaylists] = useState([]);
+ 
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/usuarios/${user}`)
+        axios.get(`http://localhost:3001/playlists/?idUsuario=${user}`)
             .then((resp) => {
-                setPlaylists(resp.data.playlists)
+                setPlaylists(resp.data)
             });
     }, [])
 

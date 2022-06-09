@@ -28,9 +28,10 @@ function Login({setEstaLogado}) {
       .then((resp) => {
         let login = resp.data.find((p) => p.email == email && p.senha == senha);
         if (login) {
-          localStorage.setItem('usuarioLogado', JSON.stringify(login.id));
+          console.log(login)
+          localStorage.setItem('usuarioLogado', JSON.stringify(login._id));
           setEstaLogado(JSON.parse(localStorage.getItem('usuarioLogado')));
-          navigate(`/menulogado/${login.id}/musicas`, {state:{id:login.id}}, { replace: true })
+          navigate(`/menulogado/${login._id}/musicas`, {state:{id:login._id}}, { replace: true })
         }
       }
       );
