@@ -9,7 +9,11 @@ export default function SuasPlaylist() {
  
 
     useEffect(() => {
+<<<<<<< HEAD
         axios.get(`http://localhost:3001/playlists/?idUsuario=${user}`)
+=======
+        axios.get(`http://localhost:3001/usuarios/${user}`) //playlists/?idUsuario=${user}
+>>>>>>> 4199c68d12010bdb6fef22cbe55b4dc6df0ceb31
             .then((resp) => {
                 setPlaylists(resp.data)
             });

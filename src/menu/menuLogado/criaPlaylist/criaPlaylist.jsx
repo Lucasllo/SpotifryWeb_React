@@ -43,8 +43,16 @@ export default function CriaPlaylist() {
     
     function salvar(e) {
         e.preventDefault();
+<<<<<<< HEAD
         
         axios.post(`http://localhost:3001/playlists`, {
+=======
+        //criar rota de edição de playlist patch- /playlists/(id da playlist) - e a nova playlist no body
+        // enviar apenas a nova array de musica no body 
+
+        //criar nova playlist post - enviar objeto todo / playlists/ - body ={idUsuario,imagem,nome,musica}
+        axios.patch(`http://localhost:3001/usuarios/${user}`, {
+>>>>>>> 4199c68d12010bdb6fef22cbe55b4dc6df0ceb31
             playlists: musicasSelecionadas
         })
             .then(resposta => console.log(resposta.data))
